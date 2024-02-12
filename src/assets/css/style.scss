@@ -1,0 +1,133 @@
+@import './front/home.scss';
+@import './front/products.scss';
+@import './front/news.scss';
+@import './front/qa.scss';
+@import './front/order.scss';
+@import './front/swiperStyle.scss';
+@import './login.scss';
+
+.max-width-130 {
+  max-width: 130px;
+}
+.bgImageCover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  // filter: blur(5px) brightness(0.5) grayscale(0.2);
+  //brightness亮度  grayscale灰階
+}
+.object-cover{
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+// .img-cover {
+//   width: 100%;
+//   height: 100%;
+//   -o-object-fit: cover;
+//   object-fit: cover;
+//   -o-object-position: center;
+//   object-position: center;
+// }
+.btn-outline-buttonbg {
+  color: $maingray;
+}
+@media (max-width: 576px) {
+  .w-sm-50{
+    width: 50%;
+  }
+}
+//logo--------------
+.light {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(235 235 235 / 40%) 50%, rgba(255, 255, 255, 0) 100%);
+  animation: light 3s linear infinite;
+}
+
+@keyframes light {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+//navbar------------
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 7px 2px #0000000d;
+}
+.nav-link {
+  &.router-link-exact-active {
+    border-bottom: 3px solid $mainColor;
+    padding-bottom: 3px;
+    font-weight: 500;
+    color: $maingray;
+  }
+  i {
+    font-size: 1.1rem;
+  }
+}
+//end navbar--------
+
+//pageBanner
+@mixin bannerText-padding {
+  padding-left: 25vw;
+  padding-right: 30px;
+}
+@mixin bannerText-padding-m {
+  padding-left: 18vw;
+  padding-right: 15px;
+}
+// @mixin @include 、 % @extend %
+
+.pageBanner {
+  background-image: url('../images/banner_bg.jpg');
+  height: 32vh;
+  h2 {
+    position: relative;
+    background-color: $buttonBg;
+    @include bannerText-padding;
+    margin-top: 8vh;
+    span {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      font-size: 3rem;
+      color: rgb(255 255 255 / 59%);
+    }
+  }
+  // hr{
+  //   @include bannerText-padding;
+  //   // border: 3px solid $mainColor;
+  // }
+  @media (max-width: 768px) {
+    height: 25vh;
+    h2 {
+      @include bannerText-padding-m;
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+      span {
+        font-size: 2rem;
+        top: -33px;
+      }
+    }
+    hr{
+      // @include bannerText-padding-m;
+      // border: 1px solid $mainColor;
+      margin: 0.5rem 0;
+    }
+  }
+}
+//end pageBanner
+
+
+footer {
+  background-color: $mainBg;
+}

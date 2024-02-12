@@ -1,0 +1,11 @@
+.orderTable{
+  table{
+    border-top: 1px solid $gray-300;
+    tr{
+      th{
+        background-color: $gray-200;
+        font-weight: normal;
+      }
+    }
+  }
+}

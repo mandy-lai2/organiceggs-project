@@ -1,0 +1,23 @@
+.loginBg{
+  height: 100vh;
+  background-image: linear-gradient(to bottom left, #87C6FA, #3F5E76);
+  .goFront{
+    // background-image: url('../images/loginImg.png');
+    // padding: 50px 50px 200px 50px;
+    position: relative;
+    .loginAirplane{
+      position: absolute;
+      top: 0;
+      text-align: right;
+      img{
+        opacity: 0;
+      }
+    }
+  }
+  .loginForm{
+    background-color: #ffffffad;
+    border-radius: 15px;
+    text-align: center;
+    padding: 26px;
+  }
+}

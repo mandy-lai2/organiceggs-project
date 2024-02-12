@@ -1,0 +1,29 @@
+
+.orderProgress{
+  button{
+    width: 2rem;
+    height: 2rem;
+    color: #ffffff;
+    cursor: initial;
+    &.btn:hover{
+      color: #ffffff;
+    }
+    i{
+      margin-left: -10px;
+    }
+    span{
+      position: absolute;
+      width: 80px;
+      top: -110%;
+      left: -80%;
+    }
+  }
+}
+.productQty{
+  margin-left: -1px;
+  padding: 0.375rem 0.7rem
+}
+.totalInfo{
+  padding: 1.5rem;
+  background-color: #f7f7f7;
+}

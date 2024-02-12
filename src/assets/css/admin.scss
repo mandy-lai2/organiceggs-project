@@ -1,0 +1,82 @@
+@import './admin/products.scss';
+@import './admin/orders.scss';
+
+.cursor-pointer{
+  cursor: pointer;
+}
+.adminNav{
+  .navbar{
+    box-shadow: none;
+    .offcanvas{
+      font-size: 1.2rem;
+      max-width: 50%;
+      width: 46px;
+      visibility:visible;
+      transform:none;
+      overflow: hidden;
+      border: initial;
+      box-shadow: 2px 0px 2px #ccc;
+      transition: width 0.1s;
+      &.show{
+        width: 180px;
+      }
+      i{
+        font-size: 1.3rem;
+      }
+      .offcanvas-body{
+        overflow-y:initial;
+        .nav-item{
+          margin-bottom: 10px;
+          .nav-link{
+            padding-bottom: 5px;
+            &.active{
+              border-bottom: 2px solid $buttonBg;
+            }
+            &:hover{
+              border-bottom: 2px solid $buttonBg;
+            }
+          }
+        }
+      }
+      &:hover{
+        width: 180px;
+      }
+    }
+  }
+}
+.adminRight{
+  padding-left: 47px;
+  transition: margin .3s ease-in-out;
+  &.navOpen{
+    padding-left: 180px;
+    @media (max-width: 576px) {
+      padding-left: 0
+    }
+  }
+  .navBtn{
+    button{
+      font-size: 1.8rem;
+      border: 0;
+      box-shadow: 2px 2px 2px #ccc;
+      padding: 2px 12px;
+      background-color: #fff;
+      border-radius: 5px 0;
+      i{
+        color: #939393;
+      }
+    }
+  }
+  .admincontent{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  footer{
+    // position: fixed;
+    // bottom: 0;
+    width: 100%;
+    background-color: $gray-200;
+    border-top: 1px solid $gray-300;
+  }
+}

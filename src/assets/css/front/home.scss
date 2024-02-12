@@ -1,0 +1,74 @@
+main {
+  background-image: url('../images/main.jpg');
+  height: 100vh;
+  .container {
+    position: relative;
+    height: 100vh;
+    .text-end {
+      position: absolute;
+      bottom: 50%;
+      // width: fit-content;
+      h1 {
+        color: #ffffff;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        // animation: typing 2s steps(10), blinking 0.5s step-end alternate;
+        animation: typing 2s steps(20) ;
+        
+      }
+      .btn-outline-buttonbg {
+        color: $buttonbg;
+        &:hover {
+          color: $maingray;
+        }
+      }
+    }
+    img {
+      position: absolute;
+      right: 5%;
+      bottom: 10%;
+      @media (max-width: 768px) {
+        right: 0;
+        bottom: 20%;
+      }
+    }
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+.bi-arrow-down-short.instructDown::before{
+  animation: downAnimate 1s infinite;
+}
+@keyframes downAnimate {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+// @keyframes blinking {
+//   50% {
+//     border-color: transparent;
+//   }
+// }
+.guaranteeCircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
+}
+.newsBg {
+  background-image: url('../images/news_bg.jpg');
+  min-height: 140px;
+  h3 {
+    color: #ffffff;
+  }
+}
