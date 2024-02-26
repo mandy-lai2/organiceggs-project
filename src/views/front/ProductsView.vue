@@ -64,7 +64,7 @@ export default {
   </header>
   <section>
     <div class="container mb-5">
-      <div class="d-flex mt-5 mb-2 productsCategory">
+      <div class="d-flex mt-5 mb-2 productsCategory flex-wrap">
         <button v-for="(category, idx) in Object.keys(categorys)" :key="idx" type="button"
           class="btn btn-outline-buttonbg" :class="{ 'active': category == currentCategory }"
           @click="selectCategory(category)">{{ category }}<span v-show="category !== '全部商品'">{{ `(${categorys[category]})`
@@ -81,16 +81,16 @@ export default {
             <div class="card-body">
               <router-link :to="`/product/${product.id}`" class="text-decoration-none link-dark">
                 <h5 class="card-title text-start">{{ product.title }}</h5>
-                <p class="card-text text-end text-mainred">
+                <p class="card-text text-end text-mainred mb-2">
                   <span class="text-decoration-line-through text-decoration-line-through text-secondary">
                     原價 ${{ product.origin_price }}元</span>
                   <br>優惠價 ${{ product.price }}元
                 </p>
               </router-link>
-              <div class="d-flex justify-content-between">
-                <button type="button" class="btn btn-outline-maingreen" @click="addLikeProduct(product.id)"><i
+              <div class="d-flex justify-content-between flex-column flex-sm-row">
+                <button type="button" class="btn btn-outline-maingreen mb-2" @click="addLikeProduct(product.id)"><i
                     class="bi bi-heart-fill"></i> 加入最愛</button>
-                <button type="button" class="btn btn-buttonbg" @click="addCart(product.id)"><i class="bi bi-cart"></i>
+                <button type="button" class="btn btn-buttonbg mb-2" @click="addCart(product.id)"><i class="bi bi-cart"></i>
                   加入購物車</button>
 
               </div>

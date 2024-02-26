@@ -69,7 +69,7 @@ export default {
             <div class="">{{tempProduct.description}}</div>
             <div>付款方式：信用卡、ATM、貨到付款</div>
             <div>運 費：常溫配送免運費</div>
-            <div class="hstack justify-content-between">
+            <div class="hstack justify-content-between flex-column flex-sm-row align-items-end">
               <div class="btn-group" role="group">
                 <button type="button" class="btn btn-outline-maingreen" @click="qtyCount('subtract')">-</button>
                 <input

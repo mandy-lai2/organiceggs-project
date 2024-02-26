@@ -51,15 +51,15 @@ export default{
             <div class="card-body">
               <router-link :to="`/product/${product.id}`"  class="text-decoration-none link-dark">
               <h5 class="card-title text-start">{{ product.title }}</h5>
-              <p class="card-text text-end text-mainred">
+              <p class="card-text text-end text-mainred mb-2">
                 <span class="text-decoration-line-through text-decoration-line-through text-secondary">
                   原價 ${{ product.origin_price }}元</span>
                 <br>優惠價 ${{ product.price }}元
               </p>
             </router-link>
-              <div class="d-flex justify-content-between">
-                <button type="button" class="btn btn-maingreen" @click="delLikeProduct(product.id)">刪除最愛</button>
-                <button type="button" class="btn btn-buttonbg" @click="addCart(product.id)"><i class="bi bi-cart"></i> 加入購物車</button>
+              <div class="d-flex justify-content-between flex-column flex-sm-row">
+                <button type="button" class="btn btn-maingreen mb-2" @click="delLikeProduct(product.id)">刪除最愛</button>
+                <button type="button" class="btn btn-buttonbg mb-2" @click="addCart(product.id)"><i class="bi bi-cart"></i> 加入購物車</button>
 
               </div>
             </div>

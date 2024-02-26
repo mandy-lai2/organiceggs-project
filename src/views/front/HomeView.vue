@@ -13,7 +13,8 @@ export default {
   data() {
     return {
       modules: [Pagination, Navigation],
-      hotProducts: []
+      hotProducts: [],
+      isAos: true
     }
   },
   computed:{
@@ -177,7 +178,7 @@ export default {
   <section>
     <div class="container py-4 my-3">
       <div class="row row-cols-1 row-cols-md-2 my-4">
-        <div class="col text-center" data-aos="fade-right">
+        <div class="col text-center" data-aos="fade-right" >  
           <img class="img-thumbnail mw-75" src="../../assets/images/about/eggImg1.jpg">
         </div>
         <div class="col col-lg-5 d-flex align-items-center my-3 my-md-0" data-aos="fade-left">
@@ -209,4 +210,11 @@ export default {
     </div>
   </section>
 </template>
-
+<style lang="scss" scoped>
+// 未確認???
+html:not(.no-js) [data-aos^=fade][data-aos^=fade]{
+  @media (max-width: 860px) {
+    transform: none;
+  }
+}
+</style>
